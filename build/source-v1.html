@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LowSpecLeonida — Run GTA 6 on a Budget PC</title>
+<meta name="description" content="Budget PC builds, performance settings and (after launch) the best mods for running GTA 6 on PC without spending a fortune.">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0d0b14;--card:#17131f;--line:#2a2335;--pink:#ff4fa3;--teal:#2de2c8;--sun:#ffb347;--text:#efeaf6;--mute:#a49cb3}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;line-height:1.6}
+a{color:var(--teal)}
+header{position:sticky;top:0;z-index:5;background:rgba(13,11,20,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{max-width:1100px;margin:auto;display:flex;align-items:center;gap:22px;padding:14px 20px;flex-wrap:wrap}
+.logo{font-family:'Bebas Neue';font-size:30px;letter-spacing:1px;text-decoration:none;color:var(--text)}
+.logo span{color:var(--pink)}
+.nav a.l{color:var(--mute);text-decoration:none;font-weight:600;font-size:14px}
+.nav a.l.on,.nav a.l:hover{color:var(--text)}
+main{max-width:1100px;margin:auto;padding:0 20px 60px}
+.hero{padding:70px 0 40px;background:radial-gradient(circle at 80% 0%,rgba(255,79,163,.25),transparent 50%),radial-gradient(circle at 10% 30%,rgba(45,226,200,.15),transparent 45%)}
+h1{font-family:'Bebas Neue';font-size:clamp(46px,8vw,86px);line-height:.95;letter-spacing:1px}
+h1 em{font-style:normal;background:linear-gradient(90deg,var(--sun),var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent}
+h2{font-family:'Bebas Neue';font-size:40px;letter-spacing:1px;margin:40px 0 12px}
+h3{font-size:18px;margin-bottom:6px}
+p.lead{font-size:19px;color:var(--mute);max-width:640px;margin:18px 0 26px}
+.btn{display:inline-block;background:var(--pink);color:#fff;padding:12px 22px;border-radius:10px;font-weight:800;text-decoration:none;margin:4px 8px 4px 0}
+.btn.alt{background:transparent;border:1px solid var(--teal);color:var(--teal)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+.tag{display:inline-block;font-size:12px;font-weight:800;padding:3px 9px;border-radius:99px;background:rgba(45,226,200,.15);color:var(--teal);margin-bottom:10px}
+.tag.p{background:rgba(255,79,163,.15);color:var(--pink)}
+.tag.s{background:rgba(255,179,71,.15);color:var(--sun)}
+.note{border-left:3px solid var(--sun);background:rgba(255,179,71,.07);padding:14px 18px;border-radius:8px;margin:20px 0;color:var(--text)}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:15px}
+th,td{text-align:left;padding:10px;border-bottom:1px solid var(--line)}
+th{color:var(--mute);font-weight:600}
+ul.c{padding-left:20px;color:var(--mute)} ul.c li{margin:6px 0}
+.page{display:none}.page.on{display:block}
+select,button{font:inherit}
+.tool{display:grid;gap:12px;max-width:520px}
+.tool select{background:var(--card);color:var(--text);border:1px solid var(--line);border-radius:8px;padding:10px}
+.tool button{background:var(--teal);color:#0d0b14;border:0;border-radius:8px;padding:12px;font-weight:800;cursor:pointer}
+#verdict{margin-top:16px}
+footer{border-top:1px solid var(--line);color:var(--mute);font-size:13px;padding:26px 20px;text-align:center}
+</style>
+</head>
+<body>
+<header><div class="nav">
+<a class="logo" href="#home">LowSpec<span>Leonida</span></a>
+<a class="l" href="#will-it-run">Will It Run?</a>
+<a class="l" href="#builds">Budget Builds</a>
+<a class="l" href="#settings">Best Settings</a>
+<a class="l" href="#mods">Mods</a>
+<a class="l" href="#about">About</a>
+</div></header>
+<main>
+
+<section class="page" id="p-home">
+<div class="hero">
+<span class="tag p">PC version: date not announced yet</span>
+<h1>Play GTA 6 on PC<br><em>without going broke.</em></h1>
+<p class="lead">Budget builds, upgrade paths and settings guides for anyone who wants Vice City on a normal-person budget. We'll update everything the minute official PC specs drop.</p>
+<a class="btn" href="#will-it-run">Will my PC run it?</a>
+<a class="btn alt" href="#builds">See budget builds</a>
+</div>
+<h2>Where things stand</h2>
+<div class="grid">
+<div class="card"><span class="tag">Out now</span><h3>Consoles</h3><p>GTA 6 launched on PS5 and Xbox Series X|S on November 19, 2026.</p></div>
+<div class="card"><span class="tag s">Waiting</span><h3>PC release</h3><p>Rockstar has confirmed a PC version is planned but hasn't given a date. Past Rockstar PC ports came 9–19 months after console.</p></div>
+<div class="card"><span class="tag p">Unknown</span><h3>Official specs</h3><p>No official PC requirements yet. Our tiers below are estimates. We'll mark everything clearly when they're confirmed.</p></div>
+</div>
+<h2>Start here</h2>
+<div class="grid">
+<a class="card" href="#will-it-run" style="text-decoration:none;color:inherit"><h3>🖥️ Will it run?</h3><p style="color:var(--mute)">Pick your graphics card and get an honest estimate.</p></a>
+<a class="card" href="#builds" style="text-decoration:none;color:inherit"><h3>🛠️ Budget builds</h3><p style="color:var(--mute)">Three build tiers, plus the single upgrade that matters most.</p></a>
+<a class="card" href="#settings" style="text-decoration:none;color:inherit"><h3>⚙️ Settings</h3><p style="color:var(--mute)">What to turn down first for big FPS gains (updated at launch).</p></a>
+</div>
+</section>
+
+<section class="page" id="p-will-it-run">
+<h2>Will my PC run GTA 6?</h2>
+<div class="note"><b>Estimate only.</b> Rockstar hasn't released PC requirements. This checker uses how demanding current open-world games are and how big a jump GTA 6 looks on console. We'll replace it with official numbers on announcement day.</div>
+<div class="tool">
+<label>Your graphics card (GPU)</label>
+<select id="gpu">
+<option value="0">GTX 1060 / RX 580 or older</option>
+<option value="1">GTX 1660 / RX 5600 XT</option>
+<option value="2">RTX 2060 / RTX 3050 / RX 6600</option>
+<option value="3" selected>RTX 3060 / RTX 4060 / RX 7600</option>
+<option value="4">RTX 3070 / RTX 4060 Ti / RTX 5060 / RX 9060 XT</option>
+<option value="5">RTX 4070 / RTX 5070 / RX 7800 XT / RX 9070</option>
+<option value="6">RTX 4080 / 5080 / 4090 / 5090 / RX 7900 XTX</option>
+</select>
+<label>Your system memory (RAM)</label>
+<select id="ram"><option value="0">8 GB</option><option value="1" selected>16 GB</option><option value="2">32 GB or more</option></select>
+<button onclick="check()">Check my PC</button>
+</div>
+<div id="verdict"></div>
+</section>
+
+<section class="page" id="p-builds">
+<h2>Budget builds for GTA 6</h2>
+<div class="note">Part picks are early estimates and will be re-checked when official specs land. Prices move a lot, so always check today's price before buying. <i>Some links may be affiliate links: if you buy through them we may earn a small commission at no extra cost to you.</i></div>
+<div class="grid">
+<div class="card"><span class="tag">Tier 1</span><h3>"Just Let Me Play"</h3><p style="color:var(--mute)">Target: 1080p, low–medium, 30–60 FPS (estimated)</p>
+<table><tr><th>Part</th><th>Pick</th></tr>
+<tr><td>GPU</td><td>RTX 3060 12GB (used) or RX 7600</td></tr>
+<tr><td>CPU</td><td>Ryzen 5 5600 class</td></tr>
+<tr><td>RAM</td><td>16 GB DDR4</td></tr>
+<tr><td>Storage</td><td>1 TB NVMe SSD</td></tr></table></div>
+<div class="card"><span class="tag s">Tier 2 · Best value</span><h3>"Sweet Spot"</h3><p style="color:var(--mute)">Target: 1080p high / 1440p medium (estimated)</p>
+<table><tr><th>Part</th><th>Pick</th></tr>
+<tr><td>GPU</td><td>RTX 5060 Ti 16GB or RX 9060 XT 16GB</td></tr>
+<tr><td>CPU</td><td>Ryzen 5 7600 class</td></tr>
+<tr><td>RAM</td><td>32 GB DDR5</td></tr>
+<tr><td>Storage</td><td>1–2 TB NVMe SSD</td></tr></table></div>
+<div class="card"><span class="tag p">Tier 3</span><h3>"Max It Out (Mostly)"</h3><p style="color:var(--mute)">Target: 1440p high and up (estimated)</p>
+<table><tr><th>Part</th><th>Pick</th></tr>
+<tr><td>GPU</td><td>RTX 5070 or RX 9070</td></tr>
+<tr><td>CPU</td><td>Ryzen 7 7800X3D class</td></tr>
+<tr><td>RAM</td><td>32 GB DDR5</td></tr>
+<tr><td>Storage</td><td>2 TB NVMe SSD</td></tr></table></div>
+</div>
+<h2>Only upgrading one thing?</h2>
+<ul class="c">
+<li><b>Still on a hard drive?</b> Get an SSD first. Big open worlds stream data constantly.</li>
+<li><b>8 GB of RAM?</b> Go to 16 GB minimum. It's the cheapest real upgrade.</li>
+<li><b>GPU with 8 GB VRAM or less?</b> That's likely your biggest limit for new open-world games. Lean toward cards with 12–16 GB.</li>
+</ul>
+</section>
+
+<section class="page" id="p-settings">
+<h2>Best settings for FPS</h2>
+<div class="note">Full GTA 6 PC settings guide goes live on PC launch day, with tested numbers. Until then, here's what usually matters most in big open-world games.</div>
+<div class="grid">
+<div class="card"><h3>Turn down first</h3><ul class="c"><li>Shadows</li><li>Volumetric fog / clouds</li><li>Ray tracing</li><li>Crowd / traffic density</li></ul></div>
+<div class="card"><h3>Usually safe to keep</h3><ul class="c"><li>Texture quality (if you have the VRAM)</li><li>Anisotropic filtering</li><li>Model detail on medium+</li></ul></div>
+<div class="card"><h3>Free FPS</h3><ul class="c"><li>Upscaling (DLSS / FSR / XeSS) on Quality mode</li><li>Update GPU drivers</li><li>Close background apps and overlays</li></ul></div>
+</div>
+</section>
+
+<section class="page" id="p-mods">
+<h2>GTA 6 PC mods</h2>
+<div class="note">No PC version yet, so no mods yet. When it launches we'll keep a weekly-updated list of the best performance, graphics and fun mods, with safe install guides. Only use mods in single-player: modding online can get your account banned.</div>
+<div class="grid">
+<div class="card"><span class="tag">Planned</span><h3>Performance mods</h3><p style="color:var(--mute)">Fixes and tweaks for low-end PCs.</p></div>
+<div class="card"><span class="tag">Planned</span><h3>Graphics mods</h3><p style="color:var(--mute)">Better visuals for strong rigs.</p></div>
+<div class="card"><span class="tag">Planned</span><h3>Install guides</h3><p style="color:var(--mute)">Step-by-step, safe setup.</p></div>
+</div>
+</section>
+
+<section class="page" id="p-about">
+<h2>About LowSpecLeonida</h2>
+<p style="color:var(--mute);max-width:700px">We're a small fan site focused on one thing: helping regular people play GTA 6 on PC without overspending. Everything is labeled as <b>estimated</b> or <b>confirmed</b>, and we update guides as soon as real information arrives.</p>
+<h2>Disclosures</h2>
+<ul class="c">
+<li>LowSpecLeonida is an unofficial fan site and is not affiliated with, endorsed by, or connected to Rockstar Games or Take-Two Interactive. Grand Theft Auto and related names are trademarks of their owners.</li>
+<li>Some links are affiliate links. As an Amazon Associate we may earn from qualifying purchases.</li>
+</ul>
+</section>
+
+<section class="page" id="p-privacy">
+<h2>Privacy Policy</h2>
+<p style="color:var(--mute);max-width:760px">Last updated: November 19, 2026</p>
+<ul class="c" style="max-width:760px">
+<li><b>What we collect:</b> We don't ask you for personal information. Like most sites, our host and analytics tools may log basic, non-identifying data such as pages visited, browser type and approximate region.</li>
+<li><b>Cookies and ads:</b> We may show ads through Google AdSense. Google and its partners use cookies to serve ads based on your visits to this and other sites. You can turn off personalized ads at Google's Ads Settings (adssettings.google.com).</li>
+<li><b>Affiliate links:</b> Some links go to stores like Amazon. If you buy through them, the store may use cookies to credit us with the sale. We never see your payment details.</li>
+<li><b>Third-party sites:</b> We're not responsible for the privacy practices of sites we link to.</li>
+<li><b>Changes:</b> We may update this policy and will change the date above when we do.</li>
+<li><b>Contact:</b> Questions? Email us at the address listed on our About page.</li>
+</ul>
+</section>
+</main>
+<footer>© 2026 LowSpecLeonida · Unofficial fan site · Not affiliated with Rockstar Games · <a href="#privacy">Privacy Policy</a></footer>
+<script>
+const pages=['home','will-it-run','builds','settings','mods','about','privacy'];
+function route(){let h=location.hash.slice(1);if(!pages.includes(h))h='home';
+document.querySelectorAll('.page').forEach(p=>p.classList.toggle('on',p.id==='p-'+h));
+document.querySelectorAll('.nav a.l').forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+h));window.scrollTo(0,0)}
+addEventListener('hashchange',route);route();
+function check(){const g=+gpu.value,r=+ram.value;let t,c,m;
+if(g<=1){t='Probably not';c='p';m='Your GPU is likely below what GTA 6 will need. A GPU upgrade is the move: see Tier 1 builds.'}
+else if(g===2){t='Maybe, on low';c='s';m='Possible at 1080p low with upscaling, but it will be tight. Watch for official specs.'}
+else if(g===3){t='Likely, low–medium';c='s';m='Should be playable at 1080p low–medium with upscaling (estimate).'}
+else if(g===4){t='Likely, medium–high';c='';m='Good shape for 1080p high / 1440p medium (estimate).'}
+else if(g===5){t='Yes, high';c='';m='Should handle 1440p high comfortably (estimate).'}
+else{t='Yes, maxed-ish';c='';m='Top-tier card. Expect high to ultra settings (estimate).'}
+if(r===0)m+=' <b>Note:</b> 8 GB RAM will likely be a bottleneck. Upgrade to 16 GB+.';
+verdict.innerHTML='<div class="card"><span class="tag '+c+'">Estimate</span><h3>'+t+'</h3><p>'+m+'</p><p style="margin-top:10px"><a href="#builds">See upgrade options →</a></p></div>'}
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Will My PC Run GTA 6? Free Checker (Estimate) | LowSpecLeonida</title>
+<meta name="description" content="Pick your graphics card and RAM to get an instant estimate of how GTA 6 will run on your PC.">
+<link rel="canonical" href="https://lowspecleonida.com/will-it-run.html">
+<meta property="og:title" content="Will My PC Run GTA 6? Free Checker (Estimate) | LowSpecLeonida">
+<meta property="og:description" content="Pick your graphics card and RAM to get an instant estimate of how GTA 6 will run on your PC.">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header><div class="nav"><a class="logo" href="/">LowSpec<span>Leonida</span></a><a class="l on" href="/will-it-run.html">Will It Run?</a><a class="l" href="/builds.html">Budget Builds</a><a class="l" href="/settings.html">Best Settings</a><a class="l" href="/guides/">Guides</a><a class="l" href="/mods.html">Mods</a></div></header>
+<main>
+<h1 class="ph">Will my PC run GTA 6?</h1><div class="note"><b>Heads up:</b> Rockstar has not released official GTA 6 PC system requirements yet. Everything below is an estimate based on how demanding current open-world games are. We will update this page the day official specs drop.</div>
+<div class="tool"><label>Your graphics card (GPU)</label><select id="gpu">
+<option value="0">GTX 1060 / RX 580 or older</option><option value="1">GTX 1660 / RX 5600 XT</option>
+<option value="2">RTX 2060 / RTX 3050 / RX 6600</option><option value="3" selected>RTX 3060 / RTX 4060 / RX 7600</option>
+<option value="4">RTX 3070 / RTX 4060 Ti / RTX 5060 / RX 9060 XT</option><option value="5">RTX 4070 / RTX 5070 / RX 7800 XT / RX 9070</option>
+<option value="6">RTX 4080 / 5080 / 4090 / 5090 / RX 7900 XTX</option></select>
+<label>Your system memory (RAM)</label><select id="ram"><option value="0">8 GB</option><option value="1" selected>16 GB</option><option value="2">32 GB or more</option></select>
+<button onclick="check()">Check my PC</button></div><div id="verdict"></div>
+<h2>Related guides</h2><ul class="c"><li><a href="/guides/gta-6-rtx-3060.html">Can an RTX 3060 run GTA 6?</a></li><li><a href="/guides/gta-6-gtx-1660.html">Will GTA 6 run on a GTX 1660?</a></li><li><a href="/guides/gta-6-16gb-ram.html">Is 16GB RAM enough?</a></li></ul>
+</main>
+<footer>© 2026 LowSpecLeonida · Unofficial fan site · Not affiliated with Rockstar Games or Take-Two Interactive · <a href="/about.html">About</a> · <a href="/privacy.html">Privacy Policy</a></footer>
+<script>
+function check(){const g=+document.getElementById('gpu').value,r=+document.getElementById('ram').value;let t,c,m;
+if(g<=1){t='Probably not';c='p';m='Your GPU is likely below what GTA 6 will need. A GPU upgrade is the move.'}
+else if(g===2){t='Maybe, on low';c='s';m='Possible at 1080p low with upscaling, but it will be tight.'}
+else if(g===3){t='Likely, low–medium';c='s';m='Should be playable at 1080p low–medium with upscaling (estimate).'}
+else if(g===4){t='Likely, medium–high';c='';m='Good shape for 1080p high / 1440p medium (estimate).'}
+else if(g===5){t='Yes, high';c='';m='Should handle 1440p high comfortably (estimate).'}
+else{t='Yes, maxed-ish';c='';m='Top-tier card. Expect high to ultra settings (estimate).'}
+if(r===0)m+=' <b>Note:</b> 8 GB RAM will likely be a bottleneck. Upgrade to 16 GB+.';
+document.getElementById('verdict').innerHTML='<div class="card"><span class="tag '+c+'">Estimate</span><h3>'+t+'</h3><p>'+m+'</p><p style="margin-top:10px"><a href="/builds.html">See upgrade options →</a></p></div>'}
+</script>
+</body>
+</html>
