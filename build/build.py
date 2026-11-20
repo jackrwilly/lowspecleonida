@@ -44,8 +44,10 @@ def page(path, title, desc, body, active="", script=""):
 AFF = '<div class="note"><i>Some links on this page may be affiliate links. If you buy through them we may earn a small commission at no extra cost to you.</i></div>'
 EST = '<div class="note"><b>Heads up:</b> Rockstar has not released official GTA 6 PC system requirements yet. Everything below is an estimate based on how demanding current open-world games are. We will update this page the day official specs drop.</div>'
 
-def article(slug, title, desc, h1, intro, sections, faq):
-    body = f'<article class="post"><p class="crumbs"><a href="/guides/">Guides</a> / {h1}</p><span class="tag s">Updated {TODAY}</span><h1 class="ph">{h1}</h1><p class="lead">{intro}</p>{EST}'
+LASTMOD = {}
+
+def article(slug, title, desc, h1, intro, sections, faq, updated=TODAY):
+    body = f'<article class="post"><p class="crumbs"><a href="/guides/">Guides</a> / {h1}</p><span class="tag s">Updated {updated}</span><h1 class="ph">{h1}</h1><p class="lead">{intro}</p>{EST}'
     for h, txt in sections:
         body += f"<h2>{h}</h2>{txt}"
     body += "<h2>FAQ</h2>"
@@ -53,6 +55,7 @@ def article(slug, title, desc, h1, intro, sections, faq):
         body += f'<div class="card faq"><h3>{q}</h3><p>{a}</p></div>'
     body += '<div class="cta card"><h3>Not sure about your PC?</h3><p>Try our quick checker. Pick your graphics card and get an instant estimate.</p><a class="btn" href="/will-it-run.html">Will my PC run GTA 6? →</a></div></article>'
     page(f"guides/{slug}.html", title, desc, body, "/guides/")
+    LASTMOD[f"guides/{slug}.html"] = updated
     return (slug, h1, desc)
 
 ARTICLES = []
@@ -124,6 +127,38 @@ ARTICLES.append(article(
  [("Is a laptop or desktop better for GTA 6?", "For the same money, a desktop is usually faster and easier to upgrade. A laptop wins if you need portability."),
   ("Will GTA 6 run on a MacBook?", "Rockstar hasn't announced a Mac version.")]))
 
+ARTICLES.append(article(
+ "gta-6-rx-6600",
+ "Can an RX 6600 Run GTA 6 on PC? (Estimated Settings & FPS)",
+ "Will AMD's Radeon RX 6600 handle GTA 6 on PC? Our honest estimate of the settings to expect, how much its 8 GB of VRAM matters, and when to upgrade.",
+ "Can an RX 6600 run GTA 6?",
+ "The Radeon RX 6600 has been one of the best-value budget cards for years, so plenty of PC players are wondering if it will be enough for GTA 6. Our short answer: it should be playable at 1080p on low settings with upscaling, but it will be tight.",
+ [("Our estimate", "<p>We expect the RX 6600 to run GTA 6 at <b>1080p on low settings, with upscaling (FSR) turned on</b>, likely aiming for around 30 FPS rather than a locked 60. Ray tracing should stay off. That puts it in the \"Maybe, on low\" tier of our <a href=\"/will-it-run.html\">Will It Run checker</a>, alongside the RTX 2060 and RTX 3050.</p><p>This is an estimate. Rockstar hasn't published PC requirements, and the real numbers could land higher or lower.</p>"),
+  ("The 8 GB VRAM question", "<p>The RX 6600 has <b>8 GB of GDDR6 video memory</b>. That's enough for most games at 1080p, but large modern open-world games increasingly push past it on high texture settings. When a game runs out of VRAM you usually see stutter and blurry textures popping in, not just a lower frame rate.</p><p>Plan on <b>medium (or lower) textures</b>. If you want to check how much VRAM your card has, open Task Manager → Performance → GPU and look at \"Dedicated GPU memory.\" For more on this, compare with our <a href=\"/guides/gta-6-rtx-3060.html\">RTX 3060 guide</a>: the 12 GB version of that card has more room for textures.</p>"),
+  ("Upscaling: FSR, not DLSS", "<p>As an AMD card, the RX 6600 can't use NVIDIA's DLSS. It can use AMD's <b>FSR</b>, and Intel's <b>XeSS</b> also runs on non-Intel cards, if the PC version supports them. AMD has also said it is bringing FSR 4 to older Radeon cards, so check AMD's driver release notes for the current status. Upscaling will likely be the single biggest FPS boost available to RX 6600 owners.</p>"),
+  ("Settings to try first", "<ul class=\"c\"><li>Resolution: 1080p</li><li>Upscaling: FSR on Quality or Balanced</li><li>Textures: medium</li><li>Shadows and volumetrics/fog: low</li><li>Ray tracing: off</li><li>Cap the frame rate (for example 30 or 45) for smoother, more consistent gameplay</li></ul><p>Our <a href=\"/settings.html\">settings page</a> covers what to turn down first in more detail.</p>"),
+  ("Older motherboard? One more thing", "<p>The RX 6600 connects using <b>PCIe 4.0 x8</b> (eight lanes instead of the usual sixteen). On older PCIe 3.0 motherboards that halves the available bandwidth, which can hurt a little more when a game runs short on VRAM. It's not a reason to panic, but it's another reason to keep texture settings sensible.</p>")],
+ [("Should I upgrade my RX 6600 before GTA 6 comes to PC?", "Not yet. Wait for official specs. If you do upgrade, a 16 GB card like the RX 9060 XT 16GB or RTX 5060 Ti 16GB is a meaningful step up. See our <a href=\"/builds.html\">budget builds</a>."),
+  ("Is the RX 6600 XT much better for GTA 6?", "It's faster, but it also has 8 GB of VRAM, so the same texture limits apply. Expect similar settings with a bit more FPS."),
+  ("Will the RX 6600 run GTA 6 at 1440p?", "We wouldn't count on it. 1080p with upscaling is the realistic target.")],
+ updated="2026-11-20"))
+
+ARTICLES.append(article(
+ "gta-6-ssd-vs-hdd",
+ "Will GTA 6 Need an SSD on PC? SSD vs HDD Explained",
+ "Can you play GTA 6 on PC from a hard drive, or will you need an SSD? Our estimate, why it matters for open-world games, and SATA vs NVMe explained.",
+ "Will GTA 6 need an SSD on PC?",
+ "Storage is easy to forget when you're planning a GTA 6 upgrade, but it could matter more than you'd think. Our take: plan on installing GTA 6 on an SSD. A hard drive (HDD) may not cut it.",
+ [("Our estimate", "<p>We expect an <b>SSD to be strongly recommended, and possibly required</b>, for GTA 6 on PC. Rockstar hasn't confirmed this, but there are good reasons to expect it:</p><ul class=\"c\"><li>GTA 6 was built for PS5 and Xbox Series X|S, which both have fast SSDs built in.</li><li>A number of recent big PC releases already list an SSD in their minimum or recommended requirements.</li><li>Open-world games stream the map off your drive constantly as you move through it.</li></ul>"),
+  ("Why a hard drive struggles", "<p>A hard drive reads data from a spinning disk, which is much slower than an SSD, especially when a game needs lots of small pieces of data quickly. In open-world games that can mean long loading screens, textures and buildings popping in late, and stutters when you drive or fly fast. Even if the game launches from an HDD, it's likely to be the worst version of the experience.</p>"),
+  ("SATA SSD vs NVMe SSD", "<p>There are two common types of SSD:</p><table><tr><th>Type</th><th>Connects via</th><th>Typical max speed</th></tr><tr><td>SATA SSD</td><td>SATA cable (2.5\" drive)</td><td>~550 MB/s</td></tr><tr><td>NVMe SSD (PCIe 3.0)</td><td>M.2 slot</td><td>~3,500 MB/s</td></tr><tr><td>NVMe SSD (PCIe 4.0)</td><td>M.2 slot</td><td>up to ~7,000 MB/s</td></tr></table><p>Any SSD is a huge jump from a hard drive. A <b>SATA SSD is a fine budget option</b>, especially for older PCs without an M.2 slot. If your motherboard has a free M.2 slot, an NVMe drive is usually the better buy and leaves room for faster loading in future games.</p>"),
+  ("How much space to plan for", "<p>Rockstar hasn't said how big the PC install will be. Modern open-world games regularly take 100 GB or more, so we'd plan on a <b>1 TB SSD</b> if you're buying one, rather than trying to squeeze GTA 6 onto a nearly full 500 GB drive. A big hard drive is still fine for storing videos, screenshots and older games.</p>"),
+  ("Quick checks", "<ul class=\"c\"><li>See what drives you have: Task Manager → Performance. Each disk is labeled SSD or HDD.</li><li>Check your motherboard manual for free M.2 slots and whether they're PCIe 3.0 or 4.0.</li><li>Install the game on the SSD, not just Windows.</li></ul><p>An SSD fits well into any of our <a href=\"/builds.html\">budget build tiers</a>, and it pairs nicely with a RAM upgrade (see <a href=\"/guides/gta-6-16gb-ram.html\">Is 16GB RAM enough?</a>).</p>")],
+ [("Will GTA 6 run on a hard drive at all?", "We don't know yet. Rockstar hasn't released PC requirements. Even if it does run, expect longer loads and more stutter."),
+  ("Do I need a PCIe 4.0 NVMe drive?", "Probably not for a good experience. Any SSD should be a big improvement over a hard drive; faster NVMe drives mostly help with load times."),
+  ("Can I use an external SSD?", "A fast external SSD over USB can work for many games, but an internal SSD is the safer bet for performance and reliability.")],
+ updated="2026-11-20"))
+
 # Guides index
 gi = '<h1 class="ph">GTA 6 PC Guides</h1><p class="lead">Honest, budget-focused guides for running GTA 6 on PC. Everything is labeled as estimated until official specs are out.</p><div class="grid">'
 for slug, h1, desc in ARTICLES:
@@ -154,7 +189,7 @@ wir = '''<h1 class="ph">Will my PC run GTA 6?</h1>''' + EST + '''
 <option value="6">RTX 4080 / 5080 / 4090 / 5090 / RX 7900 XTX</option></select>
 <label>Your system memory (RAM)</label><select id="ram"><option value="0">8 GB</option><option value="1" selected>16 GB</option><option value="2">32 GB or more</option></select>
 <button onclick="check()">Check my PC</button></div><div id="verdict"></div>
-<h2>Related guides</h2><ul class="c"><li><a href="/guides/gta-6-rtx-3060.html">Can an RTX 3060 run GTA 6?</a></li><li><a href="/guides/gta-6-gtx-1660.html">Will GTA 6 run on a GTX 1660?</a></li><li><a href="/guides/gta-6-16gb-ram.html">Is 16GB RAM enough?</a></li></ul>'''
+<h2>Related guides</h2><ul class="c"><li><a href="/guides/gta-6-rtx-3060.html">Can an RTX 3060 run GTA 6?</a></li><li><a href="/guides/gta-6-gtx-1660.html">Will GTA 6 run on a GTX 1660?</a></li><li><a href="/guides/gta-6-16gb-ram.html">Is 16GB RAM enough?</a></li><li><a href="/guides/gta-6-rx-6600.html">Can an RX 6600 run GTA 6?</a></li><li><a href="/guides/gta-6-ssd-vs-hdd.html">Will GTA 6 need an SSD?</a></li></ul>'''
 script = '''<script>
 function check(){const g=+document.getElementById('gpu').value,r=+document.getElementById('ram').value;let t,c,m;
 if(g<=1){t='Probably not';c='p';m='Your GPU is likely below what GTA 6 will need. A GPU upgrade is the move.'}
@@ -186,7 +221,7 @@ page("privacy.html", "Privacy Policy | LowSpecLeonida", "Privacy policy for LowS
 
 # sitemap + robots + 404
 urls = ["", "will-it-run.html", "builds.html", "settings.html", "mods.html", "guides/", "about.html", "privacy.html"] + [f"guides/{a[0]}.html" for a in ARTICLES]
-sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "".join(f"  <url><loc>{DOMAIN}/{u}</loc><lastmod>{TODAY}</lastmod></url>\n" for u in urls) + "</urlset>\n"
+sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "".join(f"  <url><loc>{DOMAIN}/{u}</loc><lastmod>{LASTMOD.get(u, TODAY)}</lastmod></url>\n" for u in urls) + "</urlset>\n"
 open(OUT + "/sitemap.xml", "w").write(sm)
 open(OUT + "/robots.txt", "w").write(f"User-agent: *\nAllow: /\nSitemap: {DOMAIN}/sitemap.xml\n")
 page("404.html", "Page not found | LowSpecLeonida", "Page not found.", '<h1 class="ph">Page not found</h1><p class="lead">That page took a wrong turn in Vice City.</p><a class="btn" href="/">Back home</a>')
