@@ -159,6 +159,38 @@ ARTICLES.append(article(
   ("Can I use an external SSD?", "A fast external SSD over USB can work for many games, but an internal SSD is the safer bet for performance and reliability.")],
  updated="2026-11-20"))
 
+ARTICLES.append(article(
+ "gta-6-rtx-4060",
+ "Is the RTX 4060 Good for GTA 6 on PC? (Estimated Settings & FPS)",
+ "Will an RTX 4060 run GTA 6 on PC? Our honest estimate of the settings to expect, how much its 8 GB of VRAM matters, and how DLSS and frame generation could help.",
+ "Is the RTX 4060 good for GTA 6?",
+ "The RTX 4060 is one of the most common graphics cards in budget gaming PCs and prebuilts from the last few years, so a lot of PC players will be wondering if it's enough for GTA 6. Our short answer: it should be playable at 1080p with DLSS, but its 8 GB of VRAM means you'll need to be sensible with textures.",
+ [("Our estimate", "<p>We expect the RTX 4060 to run GTA 6 at <b>1080p on low to medium settings with DLSS upscaling on</b>, aiming for 30–60 FPS depending on the scene. Ray tracing will most likely need to stay off or very low. That puts it in the same \"Likely, low–medium\" tier as the RTX 3060 in our <a href=\"/will-it-run.html\">Will It Run checker</a>.</p><p>This is an estimate. Rockstar hasn't published PC requirements, and the real picture could be better or worse.</p>"),
+  ("The 8 GB VRAM catch", "<p>The desktop RTX 4060 has <b>8 GB of GDDR6 video memory</b> on a 128-bit memory bus. In most games it's a bit faster than an RTX 3060, but the 12 GB version of the 3060 actually has more room for textures. Big modern open-world games increasingly want more than 8 GB on high texture settings, and running out of VRAM tends to cause stutter and blurry textures rather than just a lower frame rate.</p><p>Plan on <b>medium textures</b> to start, and only raise them if the game stays smooth. Our <a href=\"/guides/gta-6-rtx-3060.html\">RTX 3060 guide</a> and <a href=\"/guides/gta-6-rx-6600.html\">RX 6600 guide</a> cover the same VRAM trade-off from different angles.</p>"),
+  ("DLSS and frame generation", "<p>This is where the RTX 4060 has an edge over older budget cards. It supports <b>DLSS upscaling</b>, and as an RTX 40-series card it also supports <b>DLSS Frame Generation</b>, if the PC version of GTA 6 includes it. (Multi Frame Generation is limited to RTX 50-series cards.)</p><p>Frame generation can make the game look much smoother, but it works best when your base frame rate is already decent, and it can add a little input lag. Think of it as a bonus on top of a playable setup, not a fix for a slow one. It also uses some extra VRAM, which matters on an 8 GB card.</p>"),
+  ("Settings to try first", "<ul class=\"c\"><li>Resolution: 1080p</li><li>DLSS: Quality or Balanced</li><li>Textures: medium</li><li>Shadows and volumetrics/fog: low or medium</li><li>Ray tracing: off</li><li>Frame generation: try it once your base FPS is steady</li></ul><p>See our <a href=\"/settings.html\">settings page</a> for what to turn down first.</p>"),
+  ("Older PC? Check the slot", "<p>The RTX 4060 uses <b>PCIe 4.0 x8</b>, so it only uses eight lanes. On an older PCIe 3.0 motherboard that halves the available bandwidth, which tends to hurt most when a game runs short on VRAM. Another reason to keep textures sensible.</p>")],
+ [("Is the RTX 4060 better than the RTX 3060 for GTA 6?", "It's usually a bit faster and supports DLSS Frame Generation, but the 12 GB RTX 3060 has more VRAM for textures. We'd expect them to land in a similar tier."),
+  ("Should I upgrade my RTX 4060 before GTA 6 comes to PC?", "Not yet. Wait for official specs. If you do upgrade later, a 16 GB card like the RTX 5060 Ti 16GB or RX 9060 XT 16GB is the meaningful step up. See our <a href=\"/builds.html\">budget builds</a>."),
+  ("What about the RTX 4060 laptop GPU?", "Laptop versions also have 8 GB of VRAM but run at different power limits, so performance varies a lot between laptops. Our <a href=\"/guides/gta-6-gaming-laptop.html\">gaming laptop guide</a> explains what to check.")],
+ updated="2026-11-23"))
+
+ARTICLES.append(article(
+ "gta-6-ryzen-5-3600",
+ "Is a Ryzen 5 3600 Enough for GTA 6 on PC? (CPU Estimate)",
+ "Can a Ryzen 5 3600 handle GTA 6 on PC, or will your CPU hold you back? Our honest estimate, why open-world games lean on the CPU, and the cheapest upgrade path on AM4.",
+ "Is a Ryzen 5 3600 enough for GTA 6?",
+ "The Ryzen 5 3600 was the go-to budget gaming CPU for years, and it's still in a huge number of PCs. With GTA 6 eventually heading to PC, it's fair to ask whether it can keep up. Our short answer: it will probably run the game, but it's likely to be the part that limits your frame rate, especially in busy city areas.",
+ [("Our estimate", "<p>We expect a Ryzen 5 3600 to be <b>around the minimum you'd want</b> for GTA 6 on PC, likely fine for a 30–40 FPS-style experience but struggling to hold a steady 60 FPS in crowded areas. This is an estimate; Rockstar hasn't published PC requirements yet.</p>"),
+  ("Why the CPU matters in GTA", "<p>Your graphics card draws the picture, but your CPU runs the world: traffic, pedestrians, physics and streaming in the map as you move. Dense open-world cities are some of the most CPU-heavy scenes in gaming. Lowering resolution or graphics settings helps your GPU, but it <b>doesn't do much for a CPU bottleneck</b>. If your FPS drops in busy streets no matter what settings you pick, the CPU is usually why.</p>"),
+  ("How it compares to the consoles", "<p>GTA 6 was built for PS5 and Xbox Series X|S, which both use <b>8-core AMD Zen 2 CPUs</b>. The Ryzen 5 3600 is also Zen 2, but with <b>6 cores and 12 threads</b>. It runs at higher clock speeds than the console chips, but it has fewer cores, and PC versions often add extra overhead. That's why we think it lands at the edge rather than comfortably above.</p>"),
+  ("The cheap upgrade path: stay on AM4", "<p>The good news is you probably don't need a new motherboard. The Ryzen 5 3600 uses the <b>AM4 socket</b>, and many AM4 boards also support Ryzen 5000-series CPUs like the Ryzen 5 5600, Ryzen 7 5700X or Ryzen 7 5700X3D, which are meaningfully faster for gaming. The Ryzen 5 5600 is the CPU in our Tier 1 <a href=\"/builds.html\">budget build</a>.</p><ul class=\"c\"><li>Check your motherboard's CPU support list on the manufacturer's website.</li><li><b>Update the BIOS before swapping the CPU.</b> Older boards often need it to recognize Ryzen 5000 chips.</li><li>Your existing DDR4 RAM and cooler will usually carry over.</li></ul>"),
+  ("Help it out in the meantime", "<ul class=\"c\"><li>Make sure your RAM is in dual channel with XMP turned on (see <a href=\"/guides/gta-6-16gb-ram.html\">Is 16GB RAM enough?</a>).</li><li>Close browsers and other background apps while playing.</li><li>Install the game on an SSD to reduce streaming stutter (see <a href=\"/guides/gta-6-ssd-vs-hdd.html\">SSD vs HDD</a>).</li><li>Lower crowd/traffic density and draw distance settings if the PC version offers them.</li><li>Cap your frame rate for a steadier feel.</li></ul>")],
+ [("Should I upgrade my Ryzen 5 3600 now?", "Not urgently. Wait for official specs. If you see a good deal on a Ryzen 5000 CPU that your board supports, it's one of the best-value upgrades for an AM4 PC."),
+  ("Is the Ryzen 5 3600X much better?", "Only slightly. It's the same 6-core Zen 2 design with a bit higher clock speed, so expect a similar experience."),
+  ("Will an upscaler like DLSS or FSR help a CPU bottleneck?", "Not much. Upscaling mainly reduces GPU load. It helps if your graphics card is the limit, not your CPU.")],
+ updated="2026-11-23"))
+
 # Guides index
 gi = '<h1 class="ph">GTA 6 PC Guides</h1><p class="lead">Honest, budget-focused guides for running GTA 6 on PC. Everything is labeled as estimated until official specs are out.</p><div class="grid">'
 for slug, h1, desc in ARTICLES:
@@ -167,7 +199,7 @@ gi += "</div>"
 page("guides/index.html", "GTA 6 PC Guides | LowSpecLeonida", "Budget-focused GTA 6 PC guides: release date, GPU and RAM questions, laptops and more.", gi, "/guides/")
 
 # Home
-latest = "".join(f'<a class="card link" href="/guides/{s}.html"><h3>{h}</h3><p>{d}</p></a>' for s, h, d in ARTICLES[:3])
+latest = "".join(f'<a class="card link" href="/guides/{s}.html"><h3>{h}</h3><p>{d}</p></a>' for s, h, d in ARTICLES[::-1][:3])
 home = f'''<div class="hero"><span class="tag p">PC version: date not announced yet</span>
 <h1>Play GTA 6 on PC<br><em>without going broke.</em></h1>
 <p class="lead">Budget builds, upgrade paths and settings guides for anyone who wants Vice City on a normal-person budget. We'll update everything the minute official PC specs drop.</p>
@@ -189,7 +221,7 @@ wir = '''<h1 class="ph">Will my PC run GTA 6?</h1>''' + EST + '''
 <option value="6">RTX 4080 / 5080 / 4090 / 5090 / RX 7900 XTX</option></select>
 <label>Your system memory (RAM)</label><select id="ram"><option value="0">8 GB</option><option value="1" selected>16 GB</option><option value="2">32 GB or more</option></select>
 <button onclick="check()">Check my PC</button></div><div id="verdict"></div>
-<h2>Related guides</h2><ul class="c"><li><a href="/guides/gta-6-rtx-3060.html">Can an RTX 3060 run GTA 6?</a></li><li><a href="/guides/gta-6-gtx-1660.html">Will GTA 6 run on a GTX 1660?</a></li><li><a href="/guides/gta-6-16gb-ram.html">Is 16GB RAM enough?</a></li><li><a href="/guides/gta-6-rx-6600.html">Can an RX 6600 run GTA 6?</a></li><li><a href="/guides/gta-6-ssd-vs-hdd.html">Will GTA 6 need an SSD?</a></li></ul>'''
+<h2>Related guides</h2><ul class="c"><li><a href="/guides/gta-6-rtx-3060.html">Can an RTX 3060 run GTA 6?</a></li><li><a href="/guides/gta-6-gtx-1660.html">Will GTA 6 run on a GTX 1660?</a></li><li><a href="/guides/gta-6-16gb-ram.html">Is 16GB RAM enough?</a></li><li><a href="/guides/gta-6-rx-6600.html">Can an RX 6600 run GTA 6?</a></li><li><a href="/guides/gta-6-ssd-vs-hdd.html">Will GTA 6 need an SSD?</a></li><li><a href="/guides/gta-6-rtx-4060.html">Is the RTX 4060 good for GTA 6?</a></li><li><a href="/guides/gta-6-ryzen-5-3600.html">Is a Ryzen 5 3600 enough for GTA 6?</a></li></ul>'''
 script = '''<script>
 function check(){const g=+document.getElementById('gpu').value,r=+document.getElementById('ram').value;let t,c,m;
 if(g<=1){t='Probably not';c='p';m='Your GPU is likely below what GTA 6 will need. A GPU upgrade is the move.'}

@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-11-23
+- Checked for a GTA 6 PC release date or official PC requirements: none announced yet, so release/spec pages are unchanged
+- Added guide: Is the RTX 4060 good for GTA 6? (/guides/gta-6-rtx-4060.html)
+- Added guide: Is a Ryzen 5 3600 enough for GTA 6? (/guides/gta-6-ryzen-5-3600.html)
+- Linked both new guides from the Will It Run page's related guides
+- Home page "Latest guides" now shows the three newest guides (it was showing the three oldest)
+
 ## 2026-11-20
 - Checked for a GTA 6 PC release date or official PC requirements: none announced yet, so release/spec pages are unchanged
 - Added guide: Can an RX 6600 run GTA 6? (/guides/gta-6-rx-6600.html)
