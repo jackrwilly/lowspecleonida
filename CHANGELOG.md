@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-11-25
+- Checked for a GTA 6 PC release date or official PC requirements: none announced yet (only unofficial leaks/rumors), so release/spec pages are unchanged
+- Added guide: Is 8GB of VRAM enough for GTA 6? (/guides/gta-6-8gb-vram.html)
+- Added guide: Can the Intel Arc B580 run GTA 6? (/guides/gta-6-intel-arc-b580.html)
+- Linked both new guides from the Will It Run page's related guides
+
 ## 2026-11-23
 - Checked for a GTA 6 PC release date or official PC requirements: none announced yet, so release/spec pages are unchanged
 - Added guide: Is the RTX 4060 good for GTA 6? (/guides/gta-6-rtx-4060.html)
