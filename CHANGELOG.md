@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-11-27
+- Checked for a GTA 6 PC release date or official PC requirements: none announced yet, so release/spec pages are unchanged
+- Added guide: Can an RTX 2060 run GTA 6? (/guides/gta-6-rtx-2060.html)
+- Added guide: Will GTA 6 run on Steam Deck? (/guides/gta-6-steam-deck.html)
+- Linked both new guides from the Will It Run page's related guides
+
 ## 2026-11-25
 - Checked for a GTA 6 PC release date or official PC requirements: none announced yet (only unofficial leaks/rumors), so release/spec pages are unchanged
 - Added guide: Is 8GB of VRAM enough for GTA 6? (/guides/gta-6-8gb-vram.html)
